@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prediction Video</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700|Poiret+One' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" href="https://cdnjs.cloudlflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/accident_prediction_style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Accident Prediction</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="{{ url_for('home') }}" >Home</a></li>
+            <li class="nav-item"><a href="{{ url_for('data_analysis_home') }}" >Accident Analysis</a></li>
+            <li class="nav-item"><a href="{{ url_for('prediction_home') }}" >Accident Prediction</a></li>
+            <li class="nav-item"><a href="{{ url_for('accident_criticality') }}" >Accident Criticality</a></li>
+            <li class="nav-item"><a href="{{ url_for('graph_image') }}" >Prediction Graph</a></li>           
+            <li class="nav-item"><a href="{{ url_for('weather_API') }}" >Weather API</a></li>
+            <li class="nav-item"><a href="{{ url_for('about_Team') }}" >About</a></li>
+        </ul>
+    </nav>
+
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>    
+
+    <div class="home-container" id="video1">
+        <div class="c-video">
+            <video src="{{url_for('static', filename='project_1.mp4')}}"  class="video"></video>
+            <div class="controls">
+                <div class="orange-bar">
+                    <div class="orange-juice">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="play-pause"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("very slow");
+        });
+        
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/accident_prediction_script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+</body>
+</html>
+
+    

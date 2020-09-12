@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Team</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700|Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_team_style.css') }}">
+    <!-- <link rel="stylesheet" href="team_style.css"> -->
+
+</head>
+<body>
+      <header>
+        <h1 class="logo">About team</h1>
+      </header>
+      <nav>
+        <ul>
+            <li class="nav-item"><a href="{{ url_for('home') }}" >Home</a></li>
+            <li class="nav-item"><a href="{{ url_for('data_analysis_home') }}" >Accident Analysis</a></li>
+            <li class="nav-item"><a href="{{ url_for('prediction_home') }}" >Accident Prediction</a></li>
+            <li class="nav-item"><a href="{{ url_for('accident_criticality') }}" >Accident Criticality</a></li>
+            <li class="nav-item"><a href="{{ url_for('graph_image') }}" >Prediction Graph</a></li>           
+            <li class="nav-item"><a href="{{ url_for('weather_API') }}" >Weather API</a></li>
+            <li class="nav-item"><a href="{{ url_for('about_Team') }}" >About</a></li>
+        </ul>
+      </nav>
+
+      <div class="person">
+        <div class="person-badge">
+          <img class="normal" src="{{url_for('static', filename='shivam.png')}}">
+          <img class="peculiar" src="{{url_for('static', filename='naruto.png')}}">
+        </div><br><br>
+        <h3>Shivam Budhia</h3>
+        <strong>01FB16EEC265</strong>
+        <div>          
+        </div>
+      </div>
+      <br>
+
+      <div class="person">
+        <div class="person-badge">
+          <img class="normal" src="{{url_for('static', filename='kulkarni.png')}}">
+          <img class="peculiar" src="{{url_for('static', filename='sasuke.png')}}">
+        </div><br><br>
+        <h3>Sourabh Kulkarni</h3>
+        <strong>01FB16EEC289</strong>
+        <div>        
+        </div>
+      </div>
+      <br>
+
+      <div class="person">
+        <div class="person-badge">
+          <img class="normal" src="{{url_for('static', filename='mahanty.png')}}">
+          <img class="peculiar" src="{{url_for('static', filename='sakura.png')}}">
+        </div><br><br>
+        <h3>Sourav Mahanty</h3>
+        <strong>01FB16EEC290</strong>        
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accident Analysis</title>
+    <meta name="viewport" content="width=device-width">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700|Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/data_analysis_home_style.css') }}">
+
+</head>
+<body>
+	<header>
+		  <h1 class="logo">Accident Analysis</h1>
+	</header>	
+	<nav>
+  		<ul>
+			<li class="nav-item"><a href="{{ url_for('home') }}" >Home</a></li>
+            <li class="nav-item"><a href="{{ url_for('data_analysis_home') }}" >Accident Analysis</a></li>
+            <li class="nav-item"><a href="{{ url_for('prediction_home') }}" >Accident Prediction</a></li>
+            <li class="nav-item"><a href="{{ url_for('accident_criticality') }}" >Accident Criticality</a></li>
+            <li class="nav-item"><a href="{{ url_for('graph_image') }}" >Prediction Graph</a></li>           
+            <li class="nav-item"><a href="{{ url_for('weather_API') }}" >Weather API</a></li>
+            <li class="nav-item"><a href="{{ url_for('about_Team') }}" >About</a></li>
+		</ul>
+		<div class="menu-bar">Menu
+		    <span class="hamburger-icon"><i class="fa fa-bars"></i></span>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<div class="section">
+		    <div class="col span_2_of_3">
+      		    <div class="blog-post">
+        <h1 class="blog-title">Introduction</h1>
+        <h2 class="date">Basic Overview</h2>
+        <p class="blog-content">Traffic on roads of Bangalore is not among the best in cities of India, and a recent study by Ola Cabs have confirmed the same — the average speed of vehicles at peak hours is approx 15.5 KM/hr, which is 3rd from bottom ranking among Indian cities. 
+			But there are pockets where traffic moves at high speed as well, and there are parts of city where number of accidents or potential accidents is high, at the same time at other places it is pretty low.
+			Through exploratory analysis of this public dataset, let us try to unravel some interesting observations about roads and traffic of Bangalore.</p>
+        	<!-- <a href="#" class="post-link">Read More...</a> -->
+      				</div>
+		
+				      <div class="blog-post">
+        <h1 class="blog-title">Clustering</h1>
+        <h2 class="date">Description</h2>
+        <p class="blog-content">Clustering is the method of segregating the data into a certain number of groups compromising of similar or equivalent data points. Points within the similar cluster are as same as possible whereas points belonging to another cluster are as completely different or dissimilar as possible. An example where clustering is used in our daily lives would be in shopping malls where items of the same category are places under a particular section and they do not overlap so if someone wants a particular product they can easily navigate to the particular section of their own requirement. Clusters can also have inner clusters or say smaller groups as items in the dairy section has milk section, butter section, cheese section. Clustering significantly helps in management of data in a better way. So here in our model we are analysing the accident behaviours upon different scenarios and given condition to get a detailed data analysis.</p>
+        <!-- <a href="#" class="post-link">Read More...</a> -->
+      </div>
+
+				      <div class="blog-post">
+					        <h1 class="blog-title">K-means Clustering</h1>
+        					<h2 class="date">Description</h2>
+            <p class="blog-content">K-Means which can be defined as a non-supervised machine learning algorithm which is used in clustering the given dataset into k sets of clusters. It’s a non-parametric clustering method. K means algorithm is used in scenario where we want to make groups of similar things from randomly distributed items or data points.
+				One of the most common method used to find the clusters and label in a data set using a predefined value of K. So, to get an idea of the actual number of clusters present in the data we need to calculate iteratively for a number of clusters and one by one compare the result. Thus, so as to say there is no predefined method to say the clusters but an informed decision can be made using the following technique.
+				</p>
+				</div>
+			    </div>
+				
+			    <aside class="col span_1_of_3">
+				      <div class="side-post">
+					        <img src="{{url_for('static', filename='data-analysis.jpg')}}" alt="img">
+            <p class="side-content">Data analysis is defined as a process of cleaning, transforming, and modeling data to discover useful information for business decision-making. The purpose of Data Analysis is to extract useful information from data and taking the decision based upon the data analysis.</p>
+				      </div>
+				
+				      <div class="side-post">
+					        <p class="side-content">View various Data Analysis Results</p>
+        					<a href="{{ url_for('data_analysis') }}" class="button">Results</a>
+				      </div>
+			     </aside>
+		  </div>
+	</div> 
+	<script>
+			$('.menu-bar').on('click', function(){
+			$('nav ul').toggleClass('reveal');
+		});
+	</script>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+</body>
+</html>
+
+    

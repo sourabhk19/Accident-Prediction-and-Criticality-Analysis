@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plotting Graph</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700|Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/data_analysis_style.css') }}">
+</head>
+
+<body>
+	<header>
+        <h1 class="logo">Accident Prediction</h1>
+    </header>
+    <nav>
+        <ul>
+          <li class="nav-item"><a href="{{ url_for('home') }}" >Home</a></li>
+          <li class="nav-item"><a href="{{ url_for('data_analysis_home') }}" >Accident Analysis</a></li>
+          <li class="nav-item"><a href="{{ url_for('prediction_home') }}" >Accident Prediction</a></li>
+          <li class="nav-item"><a href="{{ url_for('accident_criticality') }}" >Accident Criticality</a></li>
+          <li class="nav-item"><a href="{{ url_for('graph_image') }}" >Prediction Graph</a></li>           
+          <li class="nav-item"><a href="{{ url_for('weather_API') }}" >Weather API</a></li>
+          <li class="nav-item"><a href="{{ url_for('about_Team') }}" >About</a></li>
+        </ul>
+    </nav>
+	<div class="container">
+	  <div class="row">
+	    <div class="col-md-12">
+	      <div id="ataa-slider">
+	        <div  data-src="{{url_for('static', filename='data_1.png')}}" data-desc="Accident Heat map of Bangalore" data-name="Image No.1" alt=""></div>
+	        <div  data-src="{{url_for('static', filename='data_2.png')}}" data-desc="Top 10 accident Prone wards" data-name="Image No.2" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_3.png')}}" data-desc="Bottom 10 accident Prone wards" data-name="Image No.3" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_4.png')}}" data-desc="No. of accident as per Alarm type" data-name="Image No.4" alt=""></div>
+	        <div  data-src="{{url_for('static', filename='data_5.png')}}" data-desc="No. of accident as per Alarm type(Updated)" data-name="Image No.5" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_6.png')}}" data-desc="Percentage of alarm as date of month" data-name="Image No.6" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_7.png')}}" data-desc="Heat map of different types of alarm" data-name="Image No.7" alt=""></div>
+	        <div  data-src="{{url_for('static', filename='data_8.png')}}" data-desc="Label 1 -> Accident Label 2->No accident Y axis : --- : 0 ->Vehicle has Oversped 1->Vehicle hasn’t Oversped" data-name="Image No.8" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_9.png')}}" data-desc="this is the test image number 3" data-name="Image No.9" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_10.png')}}" data-desc="this is the test image number 1" data-name="Image No.10" alt=""></div>
+	        <div  data-src="{{url_for('static', filename='data_11.png')}}" data-desc="this is the test image number 2" data-name="Image No.11" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_12.png')}}" data-desc="this is the test image number 3" data-name="Image No.12" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_13.png')}}" data-desc="this is the test image number 1" data-name="Image No.13" alt=""></div>
+	        <div  data-src="{{url_for('static', filename='data_14.png')}}" data-desc="this is the test image number 2" data-name="Image No.14" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_15.png')}}" data-desc="Urban Traffic count" data-name="Image No.15" alt=""></div>
+          <div  data-src="{{url_for('static', filename='data_16.png')}}" data-desc="this is the test image number 3" data-name="Image No.16" alt=""></div>
+	      </div>
+	    </div>
+	  </div>
+	 </div>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"></script>
+   <script type="text/javascript" src="{{ url_for('static', filename='javascript/data_analysis_script.js') }}"></script>
+</body>
+</html>
+
+    

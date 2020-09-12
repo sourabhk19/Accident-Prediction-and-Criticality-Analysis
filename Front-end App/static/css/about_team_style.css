@@ -1,0 +1,141 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #222;
+    background: #474747;
+    font-family: 'Lato', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    max-width: 100%;
+    background: #222; /*FallBack*/
+    background: rgba(0,0,0,.6);
+    padding: 20px;
+}
+nav{
+    width: 100%;
+    margin-bottom: 1em;
+    background: #323232;
+    font-family: 'Poiret One', cursive;
+}
+
+.logo{
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 400;
+    font-family: 'Poiret One', cursive;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+}
+
+.nav-item{
+    display: inline-block;
+    padding: 20px;
+    font-size: 1.4em;
+    -webkit-transition: background .5s;
+    transition: background .5s
+}
+
+.nav-item:hover{
+    background: #474747;
+    cursor: pointer;
+}
+
+/*body {
+  background: #FFF;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+}*/
+*, :before, :after {
+    box-sizing: border-box;
+}
+.person {
+  width: 600px;
+  padding: 70px 0 0 230px;
+  min-height: 200px;
+  margin: auto;
+  position: relative;
+}
+.person-badge {
+  width: 200px;
+  height: 280px;
+  border-radius: 0 0 100px 100px;
+  overflow: hidden;
+  transform: rotate(0deg); /* To force its own layer */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.person-badge:before,
+.person-badge:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  z-index:-1;
+  width: 200px;
+  height: 200px;
+  background: #DDD;
+  background: linear-gradient(to bottom, #EEE 0%,#CCC 100%);
+  transition:500ms;
+}
+.person-badge:after {
+  background: linear-gradient(to top, #F88 0%,#EEE 100%);
+  opacity: 0;
+}
+.person:nth-child(2) .person-badge:after {
+  background: linear-gradient(to top, #5AB 0%,#EEE 100%);  
+}
+.person:nth-child(3) .person-badge:after {
+  background: linear-gradient(to top, #FC0 0%,#EEE 100%);
+}
+.person-badge:hover:after {
+  opacity: 1;
+}
+
+.person-badge img {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 500ms;
+}
+.person-badge img.peculiar {
+  opacity: 0;
+  transform: translateY(80px)
+}
+
+.person-badge:hover img.normal {opacity: 0;transform: translateY(80px)}
+.person-badge:hover img.peculiar {opacity: 1;transform: translateY(0)}
+
+.person h3 {
+  position: relative;
+  top:50px;
+  margin: 0;
+  font-weight: 200;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+strong {
+  color: #888;
+  margin:-5px 0 5px 0;
+  display:block;
+  font-size:1.2em;}
